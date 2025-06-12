@@ -38,9 +38,9 @@ def pythagoras_tree(t: turtle.Turtle, length: float, level: int) -> None:
 
 def main() -> None:
     screen = turtle.Screen()
-    screen.title("Дерево Піфагора (остаточна версія)")
+    screen.title("Дерево Піфагора")
 
-    # Створимо окрему черепашку для повідомлень
+    # Створимо окрему turtle для повідомлень
     msg_turtle = turtle.Turtle()
     msg_turtle.hideturtle()
     msg_turtle.penup()
@@ -62,7 +62,7 @@ def main() -> None:
     
     msg_turtle.clear() # Очищуємо повідомлення після успішного вводу
 
-    # Основна черепашка для малювання
+    # Основна turtle для малювання
     t = turtle.Turtle()
     t.speed(0)
     t.hideturtle()

@@ -54,4 +54,31 @@ def dynamic_programming(items, budget):
     chosen_dishes.reverse()
     return chosen_dishes, max_calories, budget - w
 
-# Демонстрація залишається без змін...
+# ===============================================================
+# ДЕМОНСТРАЦІЙНИЙ БЛОК
+# ===============================================================
+if __name__ == "__main__":
+    items = {
+        "pizza": {"cost": 50, "calories": 300},
+        "hamburger": {"cost": 40, "calories": 250},
+        "hot-dog": {"cost": 30, "calories": 200},
+        "pepsi": {"cost": 10, "calories": 100},
+        "cola": {"cost": 15, "calories": 220},
+        "potato": {"cost": 25, "calories": 350}
+    }
+
+    budget = 100
+
+    # Виклик жадібного алгоритму
+    greedy_dishes, greedy_calories, greedy_cost = greedy_algorithm(items, budget)
+    print("--- Жадібний алгоритм ---")
+    print(f"Обрані страви: {greedy_dishes}")
+    print(f"Загальна калорійність: {greedy_calories}")
+    print(f"Витрачений бюджет: {greedy_cost}\n")
+
+    # Виклик алгоритму динамічного програмування
+    dp_dishes, dp_calories, dp_cost = dynamic_programming(items, budget)
+    print("--- Динамічне програмування ---")
+    print(f"Обрані страви: {dp_dishes}")
+    print(f"Загальна калорійність: {dp_calories}")
+    print(f"Витрачений бюджет: {dp_cost}")
