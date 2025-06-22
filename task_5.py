@@ -77,7 +77,7 @@ def generate_colors(n):
         colors.append(f'#0000{shade:02x}')
     return colors
 
-# --- Оновлена Демонстрація ---
+# --- Демонстрація ---
 
 # Створення дерева (тільки один раз)
 root = Node(0)
